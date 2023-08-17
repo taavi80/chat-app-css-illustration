@@ -21,6 +21,11 @@
       rel="stylesheet"
     />
 
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+
     <style>
       /* Text
     - Pale Violet (sub-heading at the top of the app UI): hsl(276, 100%, 81%)
@@ -57,50 +62,63 @@
         align-items: center;
       }
 
-      header{
-        max-width: 240px;        
+      header {
+        max-width: 240px;
         border-radius: 25px;
         border: 9px solid #fff;
         margin: 4rem;
-        
+
         overflow: hidden;
       }
-      header p{
-        font-size: .7rem;
+      header p {
+        font-size: 0.7rem;
       }
-      header .name-container{
+      header .name-container {
         background-color: purple;
         color: lightpink;
         display: flex;
         align-items: center;
         padding: 2rem 1rem 1rem;
+        position: relative;
       }
-      header .name-container img{
+
+      .name-container .arrow-icon {
+        font-size: 0.9rem;
+        color: white;
+        margin-right: 0.3rem;
+      }
+      .name-container img {
         width: 25px;
         border: 2px solid #fff;
         border-radius: 50%;
       }
-      header .name-container h2{
-        font-size: .7rem;
-
-      } 
-      header .name-container p{
-        font-size: .5rem;
-        opacity: .6;
+      .name-container .name {
+        margin-left: 0.6rem;
       }
-      .name-container .name{
-        margin-left: .6rem;
-        line-height: 1.2;
-      } 
-      main{
-        max-width: 375px;
+
+      .name h2 {
+        font-size: 0.7rem;
+      }
+      .name p {
+        font-size: 0.5rem;
+        opacity: 0.6;
+      }
+
+      .name-container .dots-icon {
+        font-size: 0.8rem;
+        color: white;
+        margin-left: auto;
+      }
+
+      main {
         /* background-color: blue; */
+        max-width: 375px;
         text-align: center;
       }
-      main h1{
+      main h1 {
         font-size: 2.4rem;
       }
-      main p{
+      main p {
         max-width: 310px;
         color: grey;
         line-height: 2;
@@ -109,57 +127,54 @@
     </style>
   </head>
   <body>
-    
-      <header>
-        <div class="name-container">
-          <div>
-            <img src="images/avatar.jpg" alt="">
-          </div>
-          <div class="name">
-            <h2>Samuel Green</h2>
-            <p>Available to Walk</p>
-          </div>
+    <header>
+      <div class="name-container">
+        <div class="arrow-icon">
+          <i class="fa-solid fa-angle-left"></i>
         </div>
-        <div class="message">
-          <p>That sounds great. I’d be happy with that.</p>
-        </div>
-        <div class="message">
-          <p>Could you send over some pictures of your dog, please?</p>
-        </div>
-        <div class="message">
-          <p>
-            Here are a few pictures. She’s a happy girl!</p>
-          </p>
-        </div>
-        <div class="message">
-          <p>Can you make it?</p>
-        </div>
-        <div class="message">
-          <p>She looks
-        so happy! The time we discussed works. How long shall I take her out
-        for?</p>
-        </div>
-        <div class="price">
-          30 minute walk $29
-        </div>
-        <div class="price">
-          1 hour walk $49 
-        </div>
-        <div class="newMessage">
-          <p>Type a message…</p> 
-        </div>
-        
-      </header>
+        <img src="images/avatar.jpg" alt="" />
 
-      <main>
-        <h1>Simple booking</h1>
+        <div class="name">
+          <h2>Samuel Green</h2>
+          <p>Available to Walk</p>
+        </div>
+        <div class="dots-icon">
+          <i class="fas fa-ellipsis-v"></i>
+        </div>
+      </div>
+      <div class="message">
+        <p>That sounds great. I’d be happy with that.</p>
+      </div>
+      <div class="message">
+        <p>Could you send over some pictures of your dog, please?</p>
+      </div>
+      <div class="message">
+        <p>Here are a few pictures. She’s a happy girl!</p>
+      </div>
+      <div class="message">
+        <p>Can you make it?</p>
+      </div>
+      <div class="message">
         <p>
-          Stay in touch with our dog walkers through the chat interface. This
-          makes it easy to discuss arrangements and make bookings. Once the walk
-          has been completed you can rate your walker and book again all through
-          the chat.
+          She looks so happy! The time we discussed works. How long shall I take
+          her out for?
         </p>
-      </main>
+      </div>
+      <div class="price"><p>30 minute walk $29</p></div>
+      <div class="price"><p>1 hour walk $49</p></div>
+      <div class="newMessage">
+        <p>Type a message…</p>
+      </div>
+    </header>
 
+    <main>
+      <h1>Simple booking</h1>
+      <p>
+        Stay in touch with our dog walkers through the chat interface. This
+        makes it easy to discuss arrangements and make bookings. Once the walk
+        has been completed you can rate your walker and book again all through
+        the chat.
+      </p>
+    </main>
   </body>
 </html>
