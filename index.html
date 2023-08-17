@@ -48,23 +48,77 @@
       }
       body {
         min-height: 100vh;
+        background-color: lightgrey;
         font-family: "Rubik", sans-serif;
         font-size: 16px;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
       }
-      .container {
+
+      header{
+        max-width: 240px;        
+        border-radius: 25px;
+        border: 9px solid #fff;
+        margin: 4rem;
+        
+        overflow: hidden;
+      }
+      header p{
+        font-size: .7rem;
+      }
+      header .name-container{
+        background-color: purple;
+        color: lightpink;
+        display: flex;
+        align-items: center;
+        padding: 2rem 1rem 1rem;
+      }
+      header .name-container img{
+        width: 25px;
+        border: 2px solid #fff;
+        border-radius: 50%;
+      }
+      header .name-container h2{
+        font-size: .7rem;
+
+      } 
+      header .name-container p{
+        font-size: .5rem;
+        opacity: .6;
+      }
+      .name-container .name{
+        margin-left: .6rem;
+        line-height: 1.2;
+      } 
+      main{
         max-width: 375px;
+        /* background-color: blue; */
+        text-align: center;
+      }
+      main h1{
+        font-size: 2.4rem;
+      }
+      main p{
+        max-width: 310px;
+        color: grey;
+        line-height: 2;
+        margin: 2rem;
       }
     </style>
   </head>
   <body>
-    <div class="container">
+    
       <header>
-        <div class="name">
-          Samuel Green
-          <p>Available to Walk</p>
+        <div class="name-container">
+          <div>
+            <img src="images/avatar.jpg" alt="">
+          </div>
+          <div class="name">
+            <h2>Samuel Green</h2>
+            <p>Available to Walk</p>
+          </div>
         </div>
         <div class="message">
           <p>That sounds great. I’d be happy with that.</p>
@@ -73,7 +127,9 @@
           <p>Could you send over some pictures of your dog, please?</p>
         </div>
         <div class="message">
-          Here are a few pictures. She’s a happy girl!</p>
+          <p>
+            Here are a few pictures. She’s a happy girl!</p>
+          </p>
         </div>
         <div class="message">
           <p>Can you make it?</p>
@@ -92,6 +148,7 @@
         <div class="newMessage">
           <p>Type a message…</p> 
         </div>
+        
       </header>
 
       <main>
@@ -103,6 +160,6 @@
           the chat.
         </p>
       </main>
-    </div>
+
   </body>
 </html>
