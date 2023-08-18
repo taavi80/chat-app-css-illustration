@@ -118,6 +118,7 @@ header .name-container {
   border-radius: 6px;
   border-bottom-left-radius: 3px;
   margin: 0 0.4rem 0.4rem;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
 .messages-right {
   /* background-color: red; */
@@ -166,17 +167,13 @@ header .name-container {
   border-radius: 6px;
   border-bottom-left-radius: 3px;
   margin: 0 0.4rem 0.4rem;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
 .price label {
-  display: flex;
-  align-items: center;
-
+  position: relative;
   font-size: 0.6rem;
   color: hsl(270, 7%, 64%);
+  display: flex;
 }
 .price input[type="radio"] {
   margin-right: 0.3rem;
@@ -194,16 +191,15 @@ header .name-container {
 
 .price span {
   color: hsl(289, 100%, 86%);
-
-  display: inline-flex;
+  display: flex;
   align-items: center;
 }
+
 .price .actual-price {
+  position: absolute;
+  transform: translateX(95px);
   color: white;
   font-size: 1rem;
-  flex-grow: 1;
-  text-align: right;
-  padding-left: 1rem;
 }
 
 main {
