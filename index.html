@@ -25,110 +25,12 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     />
-
-    <style>
-      /* Text
-    - Pale Violet (sub-heading at the top of the app UI): hsl(276, 100%, 81%)
-    - Moderate Violet (chat on the left): hsl(276, 55%, 52%)
-    - Desaturated Dark Violet (chat on the right): hsl(271, 15%, 43%)
-    - Grayish Blue (placeholder text): hsl(206, 6%, 79%)
-    - Very Dark Desaturated Violet (main heading): hsl(271, 36%, 24%)
-    - Dark Grayish Violet (paragraph): hsl(270, 7%, 64%)
-
-    Gradients
-    These two colors are the vibrant background colors you see throughout the design and are applied as a linear gradient:
-
-    - Light Magenta: hsl(293, 100%, 63%)
-    - Light Violet: hsl(264, 100%, 61%)
-
-    Secondary
-    - White: hsl(0, 0%, 100%)
-    - Light Grayish Violet (app background): hsl(270, 20%, 96%)
-    - Very Dark Desaturated Violet (submit button background): hsl(271, 36%, 24%)
-    - Very Light Magenta (radio button outline): hsl(289, 100%, 72%) */
-
-      * {
-        margin: 0;
-        padding: 0;
-      }
-      body {
-        min-height: 100vh;
-        background-color: lightgrey;
-        font-family: "Rubik", sans-serif;
-        font-size: 16px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      }
-
-      header {
-        max-width: 240px;
-        border-radius: 25px;
-        border: 9px solid #fff;
-        margin: 4rem;
-
-        overflow: hidden;
-      }
-      header p {
-        font-size: 0.7rem;
-      }
-      header .name-container {
-        background-color: purple;
-        color: lightpink;
-        display: flex;
-        align-items: center;
-        padding: 2rem 1rem 1rem;
-        position: relative;
-      }
-
-      .name-container .arrow-icon {
-        font-size: 0.9rem;
-        color: white;
-        margin-right: 0.3rem;
-      }
-      .name-container img {
-        width: 25px;
-        border: 2px solid #fff;
-        border-radius: 50%;
-      }
-      .name-container .name {
-        margin-left: 0.6rem;
-      }
-
-      .name h2 {
-        font-size: 0.7rem;
-      }
-      .name p {
-        font-size: 0.5rem;
-        opacity: 0.6;
-      }
-
-      .name-container .dots-icon {
-        font-size: 0.8rem;
-        color: white;
-        margin-left: auto;
-      }
-
-      main {
-        /* background-color: blue; */
-        max-width: 375px;
-        text-align: center;
-      }
-      main h1 {
-        font-size: 2.4rem;
-      }
-      main p {
-        max-width: 310px;
-        color: grey;
-        line-height: 2;
-        margin: 2rem;
-      }
-    </style>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header>
       <div class="name-container">
+        <div class="speaker"></div>
         <div class="arrow-icon">
           <i class="fa-solid fa-angle-left"></i>
         </div>
@@ -142,26 +44,54 @@
           <i class="fas fa-ellipsis-v"></i>
         </div>
       </div>
-      <div class="message">
-        <p>That sounds great. I’d be happy with that.</p>
+      <div class="messages-left">
+        <div class="message">
+          <p>That sounds great. I’d be happy with that.</p>
+        </div>
+        <div class="message">
+          <p>Could you send over some pictures of your dog, please?</p>
+        </div>
       </div>
-      <div class="message">
-        <p>Could you send over some pictures of your dog, please?</p>
+      <div class="messages-right">
+        <div class="images">
+          <img src="images/dog-image-1.jpg" alt="" />
+          <img src="images/dog-image-2.jpg" alt="" />
+          <img src="images/dog-image-3.jpg" alt="" />
+        </div>
+        <div class="message">
+          <p>Here are a few pictures. She’s a happy girl!</p>
+        </div>
+        <div class="message">
+          <p>Can you make it?</p>
+        </div>
       </div>
-      <div class="message">
-        <p>Here are a few pictures. She’s a happy girl!</p>
+      <div class="messages-left">
+        <div class="message">
+          <p>
+            She looks so happy! The time we discussed works. How long shall I
+            take her out for?
+          </p>
+        </div>
+        <div class="price">
+          <label>
+            <input type="radio" name="walk-duration" value="30-min" />
+            <span>30 minute walk <span class="actual-price">$29</span></span>
+          </label>
+        </div>
+        <div class="price">
+          <label>
+            <input type="radio" name="walk-duration" value="1-hour" />
+
+            <span>1 hour walk <span class="actual-price">$49</span></span>
+          </label>
+        </div>
+        <!-- <div class="price">
+          <p>30 minute walk <span>$29</span></p>
+        </div>
+        <div class="price">
+          <p>1 hour walk <span>$49</span></p>
+        </div> -->
       </div>
-      <div class="message">
-        <p>Can you make it?</p>
-      </div>
-      <div class="message">
-        <p>
-          She looks so happy! The time we discussed works. How long shall I take
-          her out for?
-        </p>
-      </div>
-      <div class="price"><p>30 minute walk $29</p></div>
-      <div class="price"><p>1 hour walk $49</p></div>
       <div class="newMessage">
         <p>Type a message…</p>
       </div>

@@ -1,0 +1,221 @@
+/* Text
+    - Pale Violet (sub-heading at the top of the app UI): hsl(276, 100%, 81%)
+    - Moderate Violet (chat on the left): hsl(276, 55%, 52%)
+    - Desaturated Dark Violet (chat on the right): hsl(271, 15%, 43%)
+    - Grayish Blue (placeholder text): hsl(206, 6%, 79%)
+    - Very Dark Desaturated Violet (main heading): hsl(271, 36%, 24%)
+    - Dark Grayish Violet (paragraph): hsl(270, 7%, 64%)
+
+    Gradients
+    These two colors are the vibrant background colors you see throughout the design and are applied as a linear gradient:
+
+    - Light Magenta: hsl(293, 100%, 63%)
+    - Light Violet: hsl(264, 100%, 61%)
+
+    Secondary
+    - White: hsl(0, 0%, 100%)
+    - Light Grayish Violet (app background): hsl(270, 20%, 96%)
+    - Very Dark Desaturated Violet (submit button background): hsl(271, 36%, 24%)
+    - Very Light Magenta (radio button outline): hsl(289, 100%, 72%) */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background-color: lightgrey;
+  font-family: "Rubik", sans-serif;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  width: 250px;
+  background-color: hsl(270, 20%, 96%);
+  font-size: 0.6rem;
+  border-radius: 25px;
+  border: 9px solid #fff;
+  margin: 4rem 0;
+
+  overflow: hidden;
+}
+
+header .name-container {
+  /* background-color: purple; */
+  background: linear-gradient(
+    to right,
+    hsl(264, 100%, 61%),
+    hsl(293, 100%, 63%)
+  );
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  padding: 2rem 1rem 1rem;
+  margin-bottom: 0.6rem;
+  position: relative;
+}
+
+.name-container .speaker {
+  width: 130px;
+  height: 20px;
+  background-color: #fff;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.name-container .arrow-icon {
+  font-size: 0.9rem;
+  color: white;
+  margin-right: 0.3rem;
+}
+.name-container img {
+  width: 25px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+}
+.name-container .name {
+  margin-left: 0.6rem;
+}
+
+.name h2 {
+  color: hsl(0, 0%, 100%);
+  font-size: 0.6rem;
+  letter-spacing: 0.3px;
+}
+.name p {
+  color: hsl(276, 100%, 81%);
+  font-size: 0.45rem;
+  letter-spacing: 0.3px;
+  opacity: 0.6;
+}
+
+.name-container .dots-icon {
+  font-size: 0.8rem;
+  color: white;
+  margin-left: auto;
+}
+
+.messages-left {
+  /* background-color: green; */
+  color: hsl(276, 55%, 52%);
+  display: flex;
+  flex-direction: column;
+}
+.messages-left .message {
+  max-width: 140px;
+  background-color: lightgrey;
+  padding: 0.3rem;
+  border-radius: 6px;
+  border-bottom-left-radius: 3px;
+  margin: 0 0.4rem 0.4rem;
+}
+.messages-right {
+  /* background-color: red; */
+  color: hsl(271, 15%, 43%);
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.messages-right .images {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 0.4rem;
+}
+.messages-right .images img {
+  width: 40px;
+  height: 40px;
+  border-radius: 25%;
+  margin-left: 0.3rem;
+}
+
+.messages-right .message {
+  max-width: 120px;
+  background-color: #fff;
+  padding: 0.3rem;
+  border-radius: 6px;
+  border-bottom-right-radius: 3px;
+  margin: 0 0.4rem 0.4rem;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+.messages-right .message:last-child {
+  max-width: 90px;
+}
+
+.price {
+  max-width: 160px;
+  background: linear-gradient(
+    to right,
+    hsl(293, 100%, 63%),
+    hsl(264, 100%, 61%)
+  );
+  color: hsl(0, 0%, 100%);
+  padding: 0.6rem;
+  border-radius: 6px;
+  border-bottom-left-radius: 3px;
+  margin: 0 0.4rem 0.4rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.price label {
+  display: flex;
+  align-items: center;
+
+  font-size: 0.6rem;
+  color: hsl(270, 7%, 64%);
+}
+.price input[type="radio"] {
+  margin-right: 0.3rem;
+  outline: 2px solid hsl(289, 100%, 72%);
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  cursor: pointer;
+  appearance: none;
+  background-color: hsl(293, 100%, 63%);
+}
+.price input[type="radio"]:checked {
+  background-color: white;
+}
+
+.price span {
+  color: hsl(289, 100%, 86%);
+
+  display: inline-flex;
+  align-items: center;
+}
+.price .actual-price {
+  color: white;
+  font-size: 1rem;
+  flex-grow: 1;
+  text-align: right;
+  padding-left: 1rem;
+}
+
+main {
+  /* background-color: blue; */
+  text-align: center;
+}
+main h1 {
+  font-size: 2.4rem;
+}
+main p {
+  max-width: 310px;
+  color: grey;
+  line-height: 2;
+  margin: 2rem;
+}
