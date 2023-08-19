@@ -210,7 +210,28 @@ header .name-container {
   /* background-color: red; */
   margin-bottom: 0.5rem;
   text-align: center;
+  position: relative;
 }
+
+.input-icon {
+  position: absolute;
+  right: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: black;
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0.1rem;
+}
+.input-icon i {
+  color: white;
+  font-size: 0.6rem;
+}
+
 .message-container input {
   width: 95%;
   font-size: 0.6rem;
@@ -218,12 +239,6 @@ header .name-container {
   padding: 0.6rem;
   border: none;
   border-radius: 15px;
-
-  /* margin: 0 0.4rem; */
-  /* text-align: center; */
-
-  /* background-color: #fff; */
-  /* padding: 2rem; */
 }
 .message-container input::placeholder {
   color: hsl(206, 6%, 79%);
