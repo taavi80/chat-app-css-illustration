@@ -100,8 +100,8 @@ header .name-container {
 }
 
 .name-container .dots-icon {
-  font-size: 0.8rem;
   color: white;
+  font-size: 0.7rem;
   margin-left: auto;
 }
 
@@ -111,10 +111,13 @@ header .name-container {
   display: flex;
   flex-direction: column;
 }
+.message {
+  line-height: 1.3;
+}
 .messages-left .message {
   max-width: 140px;
-  background-color: lightgrey;
-  padding: 0.3rem;
+  background-color: hsl(276, 55%, 92%);
+  padding: 0.5rem;
   border-radius: 6px;
   border-bottom-left-radius: 3px;
   margin: 0 0.4rem 0.4rem;
@@ -145,7 +148,7 @@ header .name-container {
 .messages-right .message {
   max-width: 120px;
   background-color: #fff;
-  padding: 0.3rem;
+  padding: 0.5rem;
   border-radius: 6px;
   border-bottom-right-radius: 3px;
   margin: 0 0.4rem 0.4rem;
@@ -155,6 +158,9 @@ header .name-container {
   max-width: 90px;
 }
 
+.messages-left .walk-time {
+  margin: 0.6rem 0;
+}
 .price {
   max-width: 160px;
   background: linear-gradient(
@@ -188,18 +194,39 @@ header .name-container {
 .price input[type="radio"]:checked {
   background-color: white;
 }
-
 .price span {
   color: hsl(289, 100%, 86%);
   display: flex;
   align-items: center;
 }
-
 .price .actual-price {
   position: absolute;
   transform: translateX(95px);
   color: white;
   font-size: 1rem;
+}
+
+.message-container {
+  /* background-color: red; */
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+.message-container input {
+  width: 95%;
+  font-size: 0.6rem;
+  letter-spacing: 0.6px;
+  padding: 0.6rem;
+  border: none;
+  border-radius: 15px;
+
+  /* margin: 0 0.4rem; */
+  /* text-align: center; */
+
+  /* background-color: #fff; */
+  /* padding: 2rem; */
+}
+.message-container input::placeholder {
+  color: hsl(206, 6%, 79%);
 }
 
 main {
