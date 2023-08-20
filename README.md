@@ -13,7 +13,6 @@ This is a solution to the [Chat app CSS illustration challenge on Frontend Mento
 ### Built with
 
 - Semantic HTML5 markup
-- CSS custom properties
 - Mobile-first workflow
 
 ## Author
