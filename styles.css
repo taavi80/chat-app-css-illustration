@@ -225,6 +225,10 @@ header .name-container {
   border: none;
   border-radius: 15px;
 }
+.message-container input:focus {
+  outline: none;
+  box-shadow: 0px 0px 0px 2px hsl(293, 100%, 63%);
+}
 .message-container input::placeholder {
   color: hsl(206, 6%, 79%);
 }
