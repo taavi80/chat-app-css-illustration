@@ -4,7 +4,7 @@ This is a solution to the [Chat app CSS illustration challenge on Frontend Mento
 
 ### Screenshot
 
-![](design/)
+![](design/chat-app-css-illustration_desktop-design.png)
 
 - Live Site URL: https://taavi80.github.io/chat-app-css-illustration/
 
