@@ -11,11 +11,7 @@ body::before {
   content: "";
   width: 50%;
   height: 50%;
-  background: linear-gradient(
-    to top,
-    rgba(140, 113, 232, 0.6),
-    rgba(195, 113, 232, 0.6)
-  );
+  background: linear-gradient(to top, #8c71e899, #c371e899);
   border-bottom-right-radius: 100%;
   z-index: -1;
 }
@@ -50,6 +46,9 @@ header {
   margin: 4rem 0;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
   overflow: hidden;
+  /* 
+  opacity: 0;
+  animation: fade-in 1s forwards; */
 }
 header .name-container {
   background: linear-gradient(
@@ -160,6 +159,46 @@ header .name-container {
 .messages-left .walk-time {
   margin: 0.6rem 0;
 }
+
+.message {
+  opacity: 0;
+  transform: translateY(-10px);
+  animation: fade-in 0.5s forwards, delay-animation 0.5s;
+}
+/* .messages-right .images {
+  display: flex;
+  flex-direction: column;
+} */
+.messages-right .images img {
+  width: 40px;
+  height: 40px;
+  border-radius: 25%;
+  margin-top: 0.3rem;
+  animation: fade-in 0.5s forwards, delay-animation 0.5s;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes delay-animation {
+  to {
+    opacity: 1;
+  }
+}
+/* .message:nth-child(1) {
+  animation: fade-in 0.5s forwards, delay-animation 0.5s;
+}
+.message:nth-child(2) {
+  animation: fade-in 0.5s forwards, delay-animation 6s;
+} */
 
 .price {
   max-width: 160px;
