@@ -20,9 +20,10 @@ body::before {
   left: 0;
   content: "";
   width: 50%;
-  height: 50%;
+  height: 70%;
   background: linear-gradient(to top, #8c71e899, #c371e899);
-  border-bottom-right-radius: 100%;
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 50%;
   z-index: -1;
 }
 body::after {
@@ -31,9 +32,10 @@ body::after {
   right: 0;
   content: "";
   width: 50%;
-  height: 50%;
+  height: 70%;
   background-color: lightgrey;
-  border-top-left-radius: 100%;
+  border-top-right-radius: 50%;
+  border-top-left-radius: 50%;
   z-index: -1;
 }
 
