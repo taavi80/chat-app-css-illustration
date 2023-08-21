@@ -78,7 +78,7 @@ header .name-container {
   margin-right: 0.3rem;
 }
 .name-container img {
-  width: 25px;
+  width: 29px;
   border: 2px solid #fff;
   border-radius: 50%;
 }
@@ -95,7 +95,6 @@ header .name-container {
   color: hsl(276, 100%, 81%);
   font-size: 0.5rem;
   letter-spacing: 0.3px;
-  opacity: 0.6;
 }
 
 .name-container .dots-icon {
@@ -164,7 +163,7 @@ header .name-container {
   animation: slide-in 0.5s ease forwards, fade-in 0.5s ease forwards;
 }
 
-.price {
+.price-container {
   max-width: 160px;
   background: linear-gradient(
     to right,
@@ -177,13 +176,13 @@ header .name-container {
   margin: 0 0.4rem 0.3rem;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
-.price label {
+.price-container label {
   font-size: 0.7rem;
   color: hsl(270, 7%, 64%);
   display: flex;
   align-items: center;
 }
-.price input[type="radio"] {
+.price-container input[type="radio"] {
   width: 12px;
   height: 12px;
   background-color: hsl(293, 100%, 63%);
@@ -193,15 +192,15 @@ header .name-container {
   cursor: pointer;
   appearance: none;
 }
-.price input[type="radio"]:checked {
+.price-container input[type="radio"]:checked {
   background-color: #fff;
 }
-.price span {
+.price-container span {
   color: hsl(289, 100%, 86%);
   display: flex;
   align-items: center;
 }
-.price .actual-price {
+.price-container .price {
   position: absolute;
   transform: translateX(95px);
   color: #fff;
@@ -355,11 +354,11 @@ main p {
   .messages-right .message:last-child {
     max-width: 140px;
   }
-  .price {
+  .price-container {
     max-width: 260px;
     margin: 0 0.6rem 0.4rem;
   }
-  .price .actual-price {
+  .price-container .price {
     transform: translateX(175px);
   }
   .message-container {
