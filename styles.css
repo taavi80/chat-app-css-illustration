@@ -4,6 +4,16 @@
   box-sizing: border-box;
 }
 
+body {
+  min-height: 100vh;
+  background-color: rgb(222, 217, 217);
+  font-family: "Rubik", sans-serif;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 body::before {
   position: fixed;
   top: 0;
@@ -26,16 +36,6 @@ body::after {
   border-top-left-radius: 100%;
   z-index: -1;
 }
-body {
-  min-height: 100vh;
-  background-color: rgb(222, 217, 217);
-  font-family: "Rubik", sans-serif;
-  font-size: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
 
 header {
   width: 250px;
@@ -46,9 +46,6 @@ header {
   margin: 4rem 0;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  /* 
-  opacity: 0;
-  animation: fade-in 1s forwards; */
 }
 header .name-container {
   background: linear-gradient(
@@ -110,6 +107,9 @@ header .name-container {
 .message {
   line-height: 1.3;
   font-size: 0.7rem;
+  opacity: 0;
+  transform: translateX(20px);
+  animation: slide-in 0.5s ease forwards, fade-in 0.5s ease forwards;
 }
 
 .messages-left {
@@ -133,6 +133,8 @@ header .name-container {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  opacity: 0;
+  animation: slide-in 0.5s ease forwards, fade-in 0.5s ease forwards;
 }
 .messages-right .images {
   margin: 0.4rem;
@@ -156,49 +158,11 @@ header .name-container {
   max-width: 110px;
 }
 
-.messages-left .walk-time {
-  margin: 0.6rem 0;
-}
-
-.message {
+.walk-time {
+  margin-bottom: 1rem;
   opacity: 0;
-  transform: translateY(-10px);
-  animation: fade-in 0.5s forwards, delay-animation 0.5s;
+  animation: slide-in 0.5s ease forwards, fade-in 0.5s ease forwards;
 }
-/* .messages-right .images {
-  display: flex;
-  flex-direction: column;
-} */
-.messages-right .images img {
-  width: 40px;
-  height: 40px;
-  border-radius: 25%;
-  margin-top: 0.3rem;
-  animation: fade-in 0.5s forwards, delay-animation 0.5s;
-}
-
-@keyframes fade-in {
-  0% {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes delay-animation {
-  to {
-    opacity: 1;
-  }
-}
-/* .message:nth-child(1) {
-  animation: fade-in 0.5s forwards, delay-animation 0.5s;
-}
-.message:nth-child(2) {
-  animation: fade-in 0.5s forwards, delay-animation 6s;
-} */
 
 .price {
   max-width: 160px;
@@ -207,15 +171,13 @@ header .name-container {
     hsl(293, 100%, 63%),
     hsl(264, 100%, 61%)
   );
-  /* color: hsl(0, 0%, 100%); */
   padding: 0.6rem;
   border-radius: 6px;
   border-bottom-left-radius: 3px;
-  margin: 0 0.4rem 0.4rem;
+  margin: 0 0.4rem 0.3rem;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
 .price label {
-  /* position: relative; */
   font-size: 0.7rem;
   color: hsl(270, 7%, 64%);
   display: flex;
@@ -301,6 +263,41 @@ main p {
   margin: 2rem;
 }
 
+@keyframes slide-in {
+  0% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.message-1 {
+  animation-delay: 0.5s;
+}
+.message-2 {
+  animation-delay: 1s;
+}
+.message-3 {
+  animation-delay: 1.5s;
+}
+.message-4 {
+  animation-delay: 2.5s;
+}
+.message-5 {
+  animation-delay: 3s;
+}
+
 @media (min-width: 1440px) {
   html {
     font-size: 1.3rem;
@@ -360,7 +357,7 @@ main p {
   }
   .price {
     max-width: 260px;
-    margin: 0 0.6rem 0.6rem;
+    margin: 0 0.6rem 0.4rem;
   }
   .price .actual-price {
     transform: translateX(175px);
