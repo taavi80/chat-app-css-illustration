@@ -5,7 +5,7 @@
 }
 
 body {
-  /* min-height: 100vh; */
+  min-height: 100vh;
   background-color: rgb(222, 217, 217);
   font-family: "Rubik", sans-serif;
   font-size: 20px;
@@ -17,25 +17,25 @@ body {
 body::before {
   position: fixed;
   top: 0;
-  left: 0;
+  left: -320px;
   content: "";
-  width: 50%;
+  width: 550px;
   height: 70%;
   background: linear-gradient(to top, #8c71e899, #c371e899);
-  border-bottom-right-radius: 50%;
-  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 100%;
+  border-bottom-left-radius: 100%;
   z-index: -1;
 }
 body::after {
   position: fixed;
   bottom: 0;
-  right: 0;
+  right: -320px;
   content: "";
-  width: 50%;
-  height: 70%;
+  width: 550px;
+  height: 40%;
   background-color: lightgrey;
-  border-top-right-radius: 50%;
-  border-top-left-radius: 50%;
+  border-top-right-radius: 100%;
+  border-top-left-radius: 100%;
   z-index: -1;
 }
 
@@ -304,10 +304,14 @@ main p {
     font-size: 1.3rem;
   }
   body::before {
-    width: 30%;
+    width: 950px;
+    height: 90%;
+    left: -320px;
   }
   body::after {
-    width: 30%;
+    width: 950px;
+    height: 90%;
+    right: -320px;
   }
   body {
     flex-direction: row;
