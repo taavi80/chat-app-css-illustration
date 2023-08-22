@@ -76,9 +76,9 @@ header .name-container {
 }
 .name-container .arrow-icon {
   font-size: 0.9rem;
-  color: #fff;
   margin-right: 0.3rem;
 }
+
 .name-container img {
   width: 29px;
   height: auto;
@@ -102,7 +102,7 @@ header .name-container {
 
 .name-container .dots-icon {
   color: #fff;
-  font-size: 0.7rem;
+  font-size: 0.9rem;
   margin-left: auto;
 }
 
@@ -240,6 +240,7 @@ header .name-container {
   border-radius: 50%;
   width: 1.5rem;
   height: 1.5rem;
+  font-size: 0.9rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -339,7 +340,7 @@ main p {
     font-size: 0.6rem;
   }
   .name-container .dots-icon {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
   .messages-left .message {
     max-width: 200px;
@@ -380,10 +381,8 @@ main p {
   .input-icon {
     width: 1.9rem;
     height: 1.9rem;
+    font-size: 1.3rem;
     margin-right: 0.3rem;
-  }
-  .input-icon i {
-    font-size: 0.9rem;
   }
   main {
     text-align: initial;
