@@ -81,6 +81,7 @@ header .name-container {
 }
 .name-container img {
   width: 29px;
+  height: auto;
   border: 2px solid #fff;
   border-radius: 50%;
 }
